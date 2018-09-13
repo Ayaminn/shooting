@@ -13,4 +13,11 @@ public class Enemy : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "beam"){
+            Destroy(this.gameObject);
+        }
+    }
 }
